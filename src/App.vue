@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <div v-if="$route.path != '/auth'">
+            <Header></Header>
+            <main>
+                <router-view></router-view>
+            </main>
+        </div>
+        <div v-else>
+            <router-view></router-view>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    components: {
+        Header
+    },
+    computed: {
+        isLogged() {
+            return this.$auth.isLogged()
+        }
+    },
+    methods: {
+        setTitle() {
+            if (!this.$auth.isLogged() && this.$route.path !== '/auth') {
+                this.$router.push('/auth')
+            }
+            document.title = this.$route.name
+        }
+    },
+    mounted() {
+        this.setTitle()
+    },
+    beforeUpdate() {
+        this.setTitle()
+    }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
