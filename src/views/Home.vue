@@ -77,6 +77,21 @@ export default {
         {
           field: "currencyCode",
           label: "Currency"
+        getCurrency(code) {
+            switch (code) {
+                case 980:
+                    return 'UAH'
+                case 978:
+                    return 'EUR'
+                case 840:
+                    return 'USD'
+                case 643:
+                    return 'RUB'
+                case 985:
+                    return 'PLN'
+                default:
+                    return 'unknown currency: ' + code
+            }
         },
         {
           field: "commissionRate",
