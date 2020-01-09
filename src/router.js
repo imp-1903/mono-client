@@ -18,6 +18,6 @@ export default new Router({
             path: '/auth',
             name: 'Autorization',
             component: Auth
-        }
+		},
     ]
 })
