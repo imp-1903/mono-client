@@ -124,8 +124,14 @@ export default {
                     return 'UAH'
                 case 978:
                     return 'EUR'
-                default:
+                case 840:
                     return 'USD'
+                case 643:
+                    return 'RUB'
+                case 985:
+                    return 'PLN'
+                default:
+                    return 'unknown currency: ' + code
             }
         },
         getStatement(account = 0, from = this.getMonthAgo(), to = '') {
