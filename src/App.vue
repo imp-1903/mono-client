@@ -1,25 +1,12 @@
 <template>
     <div>
-        <div v-if="$route.path != '/auth'">
-            <Header></Header>
-            <main>
-                <router-view></router-view>
-            </main>
-        </div>
-        <div v-else>
-            <router-view></router-view>
-        </div>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-
 export default {
     name: 'app',
-    components: {
-        Header
-    },
     computed: {
         isLogged() {
             return this.$auth.isLogged()
