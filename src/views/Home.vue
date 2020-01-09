@@ -118,23 +118,12 @@ export default {
         cancel() {
             this.token = this.$store.state.token
         },
-        getData() {
-            this.$axios.get(`/personal/statement/xBvDN0zi1mraohD8wzbObQ/1577875390944/`, {
-                'headers': {
-                    'X-Token': this.defaultToken
-                }
-            }).then((response) => {
-                window.console.log(response)
-            }).catch((error) => {
-                window.console.log(error.response)
-            })
-        },
         getCurrency(code) {
             switch (code) {
                 case 980:
                     return 'UAH'
                 case 978:
-                    return 'UAH'
+                    return 'EUR'
                 default:
                     return 'USD'
             }

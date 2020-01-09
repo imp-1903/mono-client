@@ -3,12 +3,6 @@
         <p class="column logo">Mono</p>
         <div class="columns column is-two-thirds">
             <div class="column">
-                <!-- <router-link to="/" class="nav-element">Home</router-link> -->
-            </div>
-            <div class="column">
-                <!-- <router-link to="/" class="nav-element">Home</router-link> -->
-            </div>
-            <div class="column">
                 <a class="nav-element" @click="logout">Logout</a>
             </div>
         </div>

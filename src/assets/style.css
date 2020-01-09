@@ -30,11 +30,14 @@ main {
     transition: .3s;
     font-size: 20px;
     padding-bottom: 3px;
+    float: right;
+    margin-right: 28px;
 }
 
 .nav-element:hover {
     color: black;
     padding-left: 8px;
+    margin-right: 20px;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 }

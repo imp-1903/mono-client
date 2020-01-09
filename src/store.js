@@ -7,10 +7,6 @@ export default new Vuex.Store({
     state: {
         user_data: null
     },
-    mutations: {
-
-    },
-    actions: {
-
-    }
+    mutations: {},
+    actions: {}
 })
