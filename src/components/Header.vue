@@ -31,7 +31,7 @@
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title">Hello, Mr. {{name}}</h1>
+                <h1 class="title">Hello, {{ name }}</h1>
                 <h2 class="subtitle">get in-depth information about your bank account here</h2>
             </div>
         </div>
